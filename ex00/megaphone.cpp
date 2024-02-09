@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 
 int	main(int ac, char **av)
 {
@@ -9,12 +8,10 @@ int	main(int ac, char **av)
 		return (std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n", 1);
 	for (int x = 1; x < ac; x++)
 	{
-//		if (x != 1)
-//			putchar(' ');
 		s1 = av[x];
 		for (int y = 0; y < s1.size(); y++)
-			putchar(toupper(s1[y]));
+			std::cout << (char)toupper(s1[y]);
 	}
-	putchar('\n');
+	std::cout << '\n';
 	return (1);
 }
