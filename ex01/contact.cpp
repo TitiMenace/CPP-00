@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 16:54:14 by tschecro          #+#    #+#             */
-/*   Updated: 2024/02/09 17:06:26 by tschecro         ###   ########.fr       */
+/*   Created: 2024/02/09 17:01:40 by tschecro          #+#    #+#             */
+/*   Updated: 2024/02/09 17:17:21 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include <iostream>
+#include "Contact.hpp"
 
-class Phonebook {
 
-	public:
+Contact::Contact(void){
+	std::cout << "Contact Constructor called" << std::endl;
+	return;
+}
 
-		Phonebook(void);
-		~Phonebook(void);
-
-};
-
-#endif
+Contact::~Contact(void){
+	std::cout << "Contact Destructor called" << std::endl;
+	return;
+}

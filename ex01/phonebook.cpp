@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 16:54:14 by tschecro          #+#    #+#             */
-/*   Updated: 2024/02/09 17:06:26 by tschecro         ###   ########.fr       */
+/*   Created: 2024/02/09 17:04:40 by tschecro          #+#    #+#             */
+/*   Updated: 2024/02/09 17:17:48 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include <iostream>
+#include "Phonebook.hpp"
 
-class Phonebook {
 
-	public:
+Phonebook::Phonebook(void){
+	std::cout << "Phonebook Constructor called" << std::endl;
+	return;
+}
 
-		Phonebook(void);
-		~Phonebook(void);
-
-};
-
-#endif
+Phonebook::~Phonebook(void){
+	std::cout << "Phonebook Destructor called" << std::endl;
+	return;
+}
