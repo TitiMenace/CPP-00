@@ -9,8 +9,8 @@ int	main(int ac, char **av)
 	for (int x = 1; x < ac; x++)
 	{
 		s1 = av[x];
-		for (int y = 0; y < s1.size(); y++)
-			std::cout << (char)toupper(s1[y]);
+		for (std::string::iterator it=s1.begin(); it!=s1.end(); ++it)
+			std::cout << (char)toupper(*it);
 	}
 	std::cout << '\n';
 	return (1);
