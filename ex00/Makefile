@@ -6,7 +6,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 FILES		= megaphone
 
-SRCS		= $(addsuffix .cpp, ($FILES))
+SRCS		= $(addsuffix .cpp, $(FILES))
 
 OBJS_DIRS	= .build
 
@@ -24,7 +24,7 @@ $(OBJS_DIR)/%.o: %.cpp
 clean:
 		rm -rf $(OBJS_DIR)
 
-flcean : clean
+fclean: clean
 		rm -rf $(NAME)
 
 re : clean all
