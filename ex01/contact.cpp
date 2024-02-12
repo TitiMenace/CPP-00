@@ -6,12 +6,12 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:01:40 by tschecro          #+#    #+#             */
-/*   Updated: 2024/02/09 17:17:21 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:26:51 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Contact.hpp"
+#include "includes.hpp"
 
 
 Contact::Contact(void){
@@ -23,3 +23,4 @@ Contact::~Contact(void){
 	std::cout << "Contact Destructor called" << std::endl;
 	return;
 }
+

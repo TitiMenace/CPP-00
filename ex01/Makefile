@@ -5,7 +5,7 @@ CC			= c++
 
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
-INCLUDES	= Phonebook.hpp Contact.hpp
+INCLUDES	=  Contact.hpp Phonebook.hpp includes.hpp
 
 FILES		= contact phonebook main
 
