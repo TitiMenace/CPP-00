@@ -2,23 +2,34 @@
 #include "Contact.hpp"
 #include "includes.hpp"
 
-void	Add_command(std::string input){
+void	Add_command(void){
 	
+	std::cout << "ADD command confirmed" << std::endl;
+}
+
+void	Search_command(void){
+	
+	std::cout << "SEARCH command confirmed" << std::endl;
+}
+
+void	Exit_command(void){
+	
+	std::cout << "EXIT command confirmed" << std::endl;
+}
+
+void	input_treat(std::string	input)
+{
 	if (input == "ADD")
-		std::cout << "ADD command confirmed" << std::endl;
+		Add_command();
+	else if (input == "SEARCH")
+		Search_command();
+	else if (input == "EXIT")
+		Exit_command();
+	else
+		return;
 }
 
-void	Search_command(std::string input){
-	
-	if (input == "SEARCH")
-		std::cout << "SEARCH command confirmed" << std::endl;
-}
 
-void	Exit_command(std::string input){
-	
-	if (input == "EXIT")
-		std::cout << "EXIT command confirmed" << std::endl;
-}
 
 int	main(void){
 
@@ -28,9 +39,7 @@ int	main(void){
 	while (true){
 		std::cout << "Enter a command : "<< std::endl;
 		std::getline(std::cin, yo);
-		Add_command(yo);
-		Search_command(yo);
-		Exit_command(yo);
+		input_treat(yo);	
 	}
 	std::cout << yo << std::endl;
 	return 0;
