@@ -5,6 +5,7 @@
 
 Phonebook::Phonebook(void){
 	std::cout << "Phonebook Constructor called" << std::endl;
+	this->index = 0;
 	return;
 }
 
@@ -17,7 +18,6 @@ Phonebook::~Phonebook(void){
 
 
 void	Phonebook::Add_command(void){
-	
 	
 	std::cout << "ADD command confirmed" << std::endl;
 	if (this->index++ > 8)

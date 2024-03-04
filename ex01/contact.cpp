@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:01:40 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/04 16:37:13 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:09:31 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	Contact::Add_contact(void){
 			std::cout << "Last name empty !" << std::endl;
 			continue;
 		}
-		this->First_name = input;
+		this->Last_name = input;
 		break;
 	}
 	while (true)
@@ -57,7 +57,7 @@ void	Contact::Add_contact(void){
 			std::cout << "Nickname empty !" << std::endl;
 			continue;
 		}
-		this->First_name = input;
+		this->Nickname = input;
 		break;
 	}
 	while (true)
@@ -67,9 +67,19 @@ void	Contact::Add_contact(void){
 		if (input.empty()){
 			std::cout << "Phone number empty !" << std::endl;
 			continue;
-		if ()
 		}
-		this->First_name = input;
+		this->Phone_number = input;
+		break;
+	}
+	while (true)
+	{
+		std::cout << "Enter a Darkest secret:" << std::endl;
+		std::getline(std::cin, input);
+		if (input.empty()){
+			std::cout << "Darkest secret empty !" << std::endl;
+			continue;
+		}
+		this->Darkest_secret = input;
 		break;
 	}
 }
