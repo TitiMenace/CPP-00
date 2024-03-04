@@ -17,17 +17,7 @@ void	Exit_command(void){
 	std::cout << "EXIT command confirmed" << std::endl;
 }
 
-void	input_treat(std::string	input)
-{
-	if (input == "ADD")
-		Add_command();
-	else if (input == "SEARCH")
-		Search_command();
-	else if (input == "EXIT")
-		Exit_command();
-	else
-		return;
-}
+
 
 
 
