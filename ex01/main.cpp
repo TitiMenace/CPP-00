@@ -1,21 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/04 15:34:31 by tschecro          #+#    #+#             */
+/*   Updated: 2024/03/04 16:04:05 by tschecro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
 #include "Contact.hpp"
 #include "includes.hpp"
 
-void	Add_command(void){
-	
-	std::cout << "ADD command confirmed" << std::endl;
-}
-
-void	Search_command(void){
-	
-	std::cout << "SEARCH command confirmed" << std::endl;
-}
-
-void	Exit_command(void){
-	
-	std::cout << "EXIT command confirmed" << std::endl;
-}
 
 
 
@@ -29,7 +27,7 @@ int	main(void){
 	while (true){
 		std::cout << "Enter a command : "<< std::endl;
 		std::getline(std::cin, yo);
-		input_treat(yo);	
+		book.Input_treat(yo);	
 	}
 	std::cout << yo << std::endl;
 	return 0;

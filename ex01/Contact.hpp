@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:56:49 by tschecro          #+#    #+#             */
-/*   Updated: 2024/02/12 16:27:06 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:37:14 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ class Contact{
 	
 		Contact(void);
 		~Contact(void);
+		void	Add_contact(void);
 	
 	private:
-		
+	
 		std::string First_name;
 		std::string Last_name;
 		std::string Nickname;
 		std::string Phone_number;
 		std::string Darkest_secret;
-//		size_t		index;
 
 };
 

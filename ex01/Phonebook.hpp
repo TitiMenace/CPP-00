@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:54:14 by tschecro          #+#    #+#             */
-/*   Updated: 2024/02/13 14:49:19 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:37:11 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,17 @@ class Phonebook{
 
 	public:
 
-		void	input_treat(std::string input);
+		void	Input_treat(std::string input);
 		Phonebook(void);
 		~Phonebook(void);
 
 	private:
 		
+		void	Add_command(void);
+		void	Search_command(void);
+		void	Exit_command(void);
 		Contact	contacts[8];
+		size_t		index = 0;
 };
 
 #endif

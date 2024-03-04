@@ -13,7 +13,31 @@ Phonebook::~Phonebook(void){
 	return;
 }
 
-void	Phonebook::input_treat(std::string	input){
+
+
+
+void	Phonebook::Add_command(void){
+	
+	
+	std::cout << "ADD command confirmed" << std::endl;
+	if (this->index++ > 8)
+		this->index = 0;
+	this->contacts[index].Add_contact();
+	
+}
+
+void	Phonebook::Search_command(void){
+	
+	std::cout << "SEARCH command confirmed" << std::endl;
+}
+
+void	Phonebook::Exit_command(void){
+	
+	std::cout << "EXIT command confirmed" << std::endl;
+}
+
+
+void	Phonebook::Input_treat(std::string	input){
 	if (input == "ADD")
 		Add_command();
 	else if (input == "SEARCH")
