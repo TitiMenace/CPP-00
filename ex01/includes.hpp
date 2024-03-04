@@ -3,6 +3,7 @@
 # define INCLUDES_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <cstddef>
 # include <string>
 

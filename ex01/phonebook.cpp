@@ -20,15 +20,34 @@ Phonebook::~Phonebook(void){
 void	Phonebook::Add_command(void){
 	
 	std::cout << "ADD command confirmed" << std::endl;
+	this->contacts[index].Add_contact();
 	if (this->index++ > 8)
 		this->index = 0;
-	this->contacts[index].Add_contact();
-	
 }
 
 void	Phonebook::Search_command(void){
 	
+	std::string input;
+	std::stringstream convert;
+	size_t	index = 0;
+
+
 	std::cout << "SEARCH command confirmed" << std::endl;
+	for (int x = 0; x < 8; x++)
+		this->contacts[x].Display_contact_info(x + 1);
+	while (true)
+	{
+		std::cout << "Choose a Contact to diplay !" << std::endl;
+		std::getline(std::cin, input);
+		convert << input;
+		convert >> index;
+		if (index < 1 || index > 8){
+			std::cout << "Your input isn't a Contact index" << std::endl;
+				continue;
+		}
+		this->contacts[index - 1].Display_contact();
+		break;
+	}
 }
 
 void	Phonebook::Exit_command(void){

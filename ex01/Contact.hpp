@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:56:49 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/04 17:09:31 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/04 18:06:36 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Contact{
 		Contact(void);
 		~Contact(void);
 		void	Add_contact(void);
+		void	Display_contact_info(size_t index);
+		void	Display_contact(void);
 	
 	private:
 	
