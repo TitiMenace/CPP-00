@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:01:40 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/04 18:06:35 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/05 16:54:16 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,24 @@ Contact::~Contact(void){
 
 void	Contact::Display_contact_info(size_t index){
 	
+	std::string output;
+
 	std::cout << std::right << std::setw(10) << index;
-	std::cout << " | ";
-	std::cout << std::right << std::setw(10) << this->First_name;
-	std::cout << " | ";
-	std::cout << std::right << std::setw(10) << this->Last_name;
-	std::cout << " | ";
-	std::cout << std::right << std::setw(10) << this->Nickname << std::endl;
+	std::cout << "|";
+	output = this->First_name;
+	if (output.length() > 10)
+		output = output.substr(0, 9) + ".";
+	std::cout << std::right << std::setw(10) << output;
+	std::cout << "|";
+	output = this->Last_name;
+	if (output.length() > 10)
+		output = output.substr(0, 9) + ".";
+	std::cout << std::right << std::setw(10) << output;
+	std::cout << "|";
+	output = this->Nickname;
+	if (output.length() > 10)
+		output = output.substr(0, 9) + ".";
+	std::cout << std::right << std::setw(10) << output << std::endl;
 }
 
 void	Contact::Display_contact(void)
@@ -110,7 +121,7 @@ void	Contact::Add_contact(void){
 			std::cout << "First name empty !" << std::endl;
 			continue;
 		}
-		this->First_name = input;
+		this->First_name.assign(input);
 		break;
 	}
 	while (true)
@@ -121,7 +132,7 @@ void	Contact::Add_contact(void){
 			std::cout << "Last name empty !" << std::endl;
 			continue;
 		}
-		this->Last_name = input;
+		this->Last_name.assign(input);
 		break;
 	}
 	while (true)
@@ -132,7 +143,7 @@ void	Contact::Add_contact(void){
 			std::cout << "Nickname empty !" << std::endl;
 			continue;
 		}
-		this->Nickname = input;
+		this->Nickname.assign(input);
 		break;
 	}
 	while (true)
@@ -143,7 +154,6 @@ void	Contact::Add_contact(void){
 			std::cout << "Phone number empty !" << std::endl;
 			continue;
 		}
-		this->Phone_number = input;
 		break;
 	}
 	while (true)
@@ -154,7 +164,7 @@ void	Contact::Add_contact(void){
 			std::cout << "Darkest secret empty !" << std::endl;
 			continue;
 		}
-		this->Darkest_secret = input;
+		this->Darkest_secret.assign(input);
 		break;
 	}
 }
