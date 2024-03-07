@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:51:29 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/07 18:01:50 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/07 18:11:16 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,10 @@ void	Account::displayAccountsInfos(void){
 		std::cout << "total:" << Account::_totalAmount << ";";		
 		std::cout << "deposits:" << Account::_totalNbDeposits << ";";		
 		std::cout << "withdrawals:" << Account::_totalNbWithdrawals << std::endl;		
+}
+
+
+void	Account::displayStatus( void ) const{
+	
+	
 }
