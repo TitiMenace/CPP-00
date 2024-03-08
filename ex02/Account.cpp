@@ -6,13 +6,25 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:51:29 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/08 15:46:38 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/08 16:03:36 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp" 
 #include <iostream>
 #include <string>
+#include <ctime>
+#include <cstdio>
+
+void	Account::_displayTimestamp(void){
+	
+	char		timestamp[20];
+	std::time_t	now = std::time(NULL);
+	std::tm	*timeinfo = std::localtime(&now);
+
+	std::strftime(timestamp, sizeof(timestamp), "[%Y%m%d_%H%M%S]", timeinfo);
+	std::cout << timestamp << std::endl;
+}
 
 Account::Account(int initial_deposit){
 
