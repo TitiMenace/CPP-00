@@ -6,7 +6,7 @@
 /*   By: tschecro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:51:29 by tschecro          #+#    #+#             */
-/*   Updated: 2024/03/07 18:11:16 by tschecro         ###   ########.fr       */
+/*   Updated: 2024/03/08 15:31:59 by tschecro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 Account::Account(int initial_deposit){
 
 		Account::_nbAccounts++;
-		Account::_accountIndex = Account::_nbAccounts - 1;
-		Account::_amount = initial_deposit;
+		this->_accountIndex = Account::_nbAccounts - 1;
+		this->_amount = initial_deposit;
 		Account::_totalAmount += initial_deposit;
 		_displayTimestamp(); 
-		std::cout << "index:" << Account::_accountIndex << ";";
-		std::cout << "amount:" << Account::_amount << ";";
+		std::cout << "index:" << this->_accountIndex << ";";
+		std::cout << "amount:" << this->_amount << ";";
 		std::cout << "created" << std::endl;
 }
 
@@ -45,6 +45,26 @@ void	Account::displayAccountsInfos(void){
 
 
 void	Account::displayStatus( void ) const{
+			
+		_displayTimestamp(); 
+		std::cout << "index:" << this->_accountIndex << ";";
+		std::cout << "amount:" << this->_amount << ";";
+		std::cout << "deposits:" << this->_nbDeposits << ";";		
+		std::cout << "withdrawals:" << this->_nbWithdrawals << std::endl;		
 	
-	
+}
+
+void	Account::makeDeposit(int deposit){
+
+		_displayTimestamp(); 
+		std::cout << "index:" << this->_accountIndex << ";";
+		std::cout << "p_amount:" << this->_amount << ";";
+		this->_amount += deposit;
+		Account::_totalAmount += deposit;
+		this->_nbDeposits++;
+		Account::_totalNbDeposits++;
+		std::cout << "deposit:" << deposit << ";";		
+		std::cout << "amount:" << this->_amount << ";";
+		std::cout << "nb_deposits:" << this->_nbDeposits << std::endl;		
+
 }
